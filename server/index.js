@@ -1,7 +1,7 @@
 import express from 'express';
 import moongose from 'mongoose';
 
-mongoose.connect('mongodb://localhost/blog')
+mongoose.connect('mongodb://localhost:27017/')
 
 const app = express();
 
