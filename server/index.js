@@ -1,4 +1,7 @@
 import express from 'express';
+import moongose from 'mongoose';
+
+mongoose.connect('mongodb://localhost/blog')
 
 const app = express();
 
