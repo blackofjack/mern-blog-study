@@ -1,7 +1,17 @@
 import express from 'express';
-import moongose from 'mongoose';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
-mongoose.connect('mongodb://localhost:27017/')
+dotenv.config();
+
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("DB connected");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 const app = express();
 
